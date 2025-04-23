@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduApp Unlock Code Generator (Admin Tool)</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>EduApp Unlock Code Generator</h1>
+    <p class="description">
+        Use this tool to generate LIFETIME unlock codes for customers based on their Device ID and the grade they purchased.
+        <strong>Keep this tool private.</strong>
+    </p>
+
+    <div class="generator-container">
+        <label for="customer-device-id">Customer's Device ID:</label>
+        <input type="text" id="customer-device-id" placeholder="Paste Device ID here">
+
+        <label for="selected-grade">Grade Purchased:</label>
+        <select id="selected-grade">
+            <option value="" disabled selected>-- Select Grade --</option>
+            <option value="grade-5">Grade 5</option>
+            <option value="grade-6">Grade 6</option>
+            <option value="grade-7">Grade 7</option>
+            <option value="grade-8">Grade 8</option>
+        </select>
+
+        <button id="generate-btn">Generate Code</button>
+
+        <label for="generated-code">Generated Unlock Code:</label>
+        <input type="text" id="generated-code" readonly placeholder="Code will appear here">
+        <button id="copy-code-btn" disabled>Copy Code</button>
+
+        <p id="generator-status" class="status-message"></p>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
